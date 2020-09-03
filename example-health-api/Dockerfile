@@ -1,12 +1,8 @@
-1. Package the application using a maven-based builder image
 
 FROM maven:3.6-jdk-8 as builder
 
 COPY . .
 RUN mvn package
-
-
-# 2. Build the Open Liberty image
 
 FROM openliberty/open-liberty:javaee8-ubi-min
 
